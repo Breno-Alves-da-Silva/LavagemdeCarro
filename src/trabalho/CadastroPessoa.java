@@ -113,6 +113,7 @@ public class CadastroPessoa extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel1.setText("Nome:");
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +122,7 @@ public class CadastroPessoa extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2.setText("Sobrenome:");
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +131,7 @@ public class CadastroPessoa extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setText("Sexo:");
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -137,8 +140,10 @@ public class CadastroPessoa extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel4.setText("Telefone:");
 
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setText("Data de nascimento:");
 
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +152,7 @@ public class CadastroPessoa extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel6.setText("Endereço:");
 
         try {
@@ -162,6 +168,7 @@ public class CadastroPessoa extends javax.swing.JFrame {
 
         jButton1.setText("Confirmar");
 
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel7.setText("Cadastro Pessoal");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,7 +204,7 @@ public class CadastroPessoa extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addGap(12, 12, 12)
                         .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,7 +237,7 @@ public class CadastroPessoa extends javax.swing.JFrame {
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67)
                 .addComponent(jButton1)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         pack();
