@@ -8,18 +8,39 @@ package trabalho;
  *
  * @author Breno
  */
-public class CadastroCarroCodigo {
+public class Carro {
     private String marca;
     private String modelo;
     private int ano;
     private String cor;
     private String placa;
 
-    public CadastroCarroCodigo ( String modelo, int ano, String cor, String placa) {
+    public Carro ( String marca,String modelo, int ano, String cor, String placa) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
         this.cor = cor;
         this.placa = placa;
     }
+    
+    
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public String getPlaca() {
+        return placa;
+    };
 }

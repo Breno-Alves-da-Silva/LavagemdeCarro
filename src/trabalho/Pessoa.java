@@ -8,22 +8,22 @@ package trabalho;
  *
  * @author Breno
  */
-public class CadastroPessoaCodigo {
+public class Pessoa {
      private String nome;
     private String sobrenome;
     private String sexo;
     private String telefone;
     private String dataNascimento;
     private String endereco;
-    private CadastroCarroCodigo carro;
+    
 
-    public CadastroPessoaCodigo (String sobrenome, String sexo, String telefone, String dataNascimento, String endereco, CadastroCarroCodigo carro) {
+    public Pessoa (String nome,String sobrenome, String sexo, String telefone, String dataNascimento, String endereco) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.sexo = sexo;
         this.telefone = telefone;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
-        this.carro = carro;
+        
      }
 }
