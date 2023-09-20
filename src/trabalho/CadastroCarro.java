@@ -9,7 +9,8 @@ package trabalho;
  * @author Breno
  */
 public class CadastroCarro extends javax.swing.JFrame {
-
+        Inicial tela_principal;
+        PlanosTela tPlano;
     /**
      * Creates new form CadastroCarro
      */
@@ -199,7 +200,11 @@ public class CadastroCarro extends javax.swing.JFrame {
         String placa = caixa_placa.getText();
         int ano = Integer.parseInt(caixa_ano.getText())  ;
         Carro carro = new Carro(marca,modelo,ano,cor,placa);
-        
+        this.dispose();
+        this.tela_principal.gravaCarro(carro);
+        tPlano = new PlanosTela();
+        tPlano.tela_principal = this;
+        tPlano.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

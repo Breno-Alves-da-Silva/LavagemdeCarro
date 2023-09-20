@@ -9,12 +9,13 @@ package trabalho;
  * @author Breno
  */
 public class Pessoa {
-     private String nome;
+    private String nome;
     private String sobrenome;
     private String sexo;
     private String telefone;
     private String dataNascimento;
     private String endereco;
+    private String plano;
     
 
     public Pessoa (String nome,String sobrenome, String sexo, String telefone, String dataNascimento, String endereco) {
@@ -26,4 +27,12 @@ public class Pessoa {
         this.endereco = endereco;
         
      }
+    
+     public void addPlano(String planoU){
+         this.plano = planoU;
+             
+  }
+      public String todosOsDados(){
+        return "Nome e Sobrenome: " + this.nome + " " + this.sobrenome ;
+    }
 }

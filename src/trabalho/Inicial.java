@@ -4,12 +4,21 @@
  */
 package trabalho;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author Breno
  */
 public class Inicial extends javax.swing.JFrame {
-
+        CadastroPessoa cad_pessoa;
+        PlanosAmostra amostra;
+        Suporte sup;
+        Pessoa pessoa;
+        Carro carro;
+        Inicial tela_principal;
+        CadastroCarro cad_carro;
+        DefaultListModel model = new DefaultListModel();
     /**
      * Creates new form Inicial
      */
@@ -26,22 +35,105 @@ public class Inicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        cadastro = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        Suporte = new javax.swing.JMenuItem();
+
+        jMenu2.setText("jMenu2");
+
+        jMenuItem1.setText("jMenuItem1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        cadastro.setText("Cadastro ");
+
+        jMenuItem2.setText("Cadastro");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        cadastro.add(jMenuItem2);
+
+        jMenuBar1.add(cadastro);
+
+        jMenu3.setText("Planos");
+
+        jMenuItem3.setText("Planos");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Suporte");
+
+        Suporte.setText("Suporte");
+        Suporte.setName("Suporte"); // NOI18N
+        Suporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SuporteActionPerformed(evt);
+            }
+        });
+        jMenu4.add(Suporte);
+
+        jMenuBar1.add(jMenu4);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 597, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 410, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:;
+        cad_pessoa = new CadastroPessoa(); 
+        cad_pessoa.setVisible(true);
+        cad_pessoa.tela_principal = this;
+        
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        amostra = new PlanosAmostra(); 
+        amostra.setVisible(true);
+        amostra.tela_principal = this;
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void SuporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SuporteActionPerformed
+        // TODO add your handling code here:
+        sup = new Suporte(); 
+        sup.setVisible(true);
+        sup.tela_principal = this;
+    }//GEN-LAST:event_SuporteActionPerformed
+
+    public void gravaPessoa(Pessoa usuario){
+        pessoa = usuario;
+    }
+     public void gravaCarro(Carro car){
+        carro = car;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -78,5 +170,14 @@ public class Inicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Suporte;
+    private javax.swing.JMenu cadastro;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 }

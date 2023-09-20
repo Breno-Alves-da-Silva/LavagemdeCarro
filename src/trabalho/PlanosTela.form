@@ -32,27 +32,19 @@
               <Component id="jScrollPane6" min="-2" pref="190" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-              <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -72,13 +64,13 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -91,24 +83,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Planos"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Plano Premium"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Plano Standard"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Plano B&#xe1;sico"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox3ActionPerformed"/>
-      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane4">
       <AuxValues>
@@ -125,7 +99,7 @@
               <Font name="Arial" size="12" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="             Plano B&#xe1;sico&#xa;&#xa;&#x2022; Lavagem externa para&#xa; remo&#xe7;&#xe3;o de sujeira e detritos.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros externos&#xa;quanto de prote&#xe7;&#xe3;o.&#xa;&#xa;&#xa;&#xa;&#x2022; Com direito a 1 limpeza por m&#xea;s&#xa;&#xa;Valor R$300,00/m&#xea;s"/>
+            <Property name="text" type="java.lang.String" value="             Plano B&#xe1;sico&#xa;&#xa;&#x2022; Lavagem externa para&#xa; remo&#xe7;&#xe3;o de sujeira e detritos.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros externos&#xa;quanto de prote&#xe7;&#xe3;o.&#xa;&#xa;&#xa;&#xa;&#x2022; Com direito a 1 limpeza por m&#xea;s&#xa;&#xa;Valor R$275,00/m&#xea;s"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -145,7 +119,7 @@
               <Font name="Arial" size="12" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="           Plano Standard&#xa;&#xa;&#x2022; Lavagem externa e interna.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros internos e&#xa; externos.&#xa;&#xa;&#xa;&#xa;&#xa;&#x2022; Com direito a 2 limpeza por m&#xea;s&#xa;&#xa;Valor R$575,00/m&#xea;s"/>
+            <Property name="text" type="java.lang.String" value="           Plano Standard&#xa;&#xa;&#x2022; Lavagem externa e interna.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros internos e&#xa; externos.&#xa;&#xa;&#xa;&#xa;&#xa;&#x2022; Com direito a 2 limpeza por m&#xea;s&#xa;&#xa;Valor R$500,00/m&#xea;s"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -165,15 +139,37 @@
               <Font name="Arial" size="12" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="            Plano Premium &#xa;&#xa;&#x2022; Lavagem externa e&#xa;interna detalhada.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros internos&#xa;e externos.&#xa;&#xa;&#x2022; Aplica&#xe7;&#xe3;o de protetor de pintura.&#xa;Lavagem externa e interna.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros internos&#xa;e externos.&#xa;&#xa;&#x2022; Com direito a 4 limpeza por m&#xea;s&#xa;&#xa;Valor R$1.100,00/m&#xea;s&#xa;"/>
+            <Property name="text" type="java.lang.String" value="            Plano Premium &#xa;&#xa;&#x2022; Lavagem externa e&#xa;interna detalhada.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros internos&#xa;e externos.&#xa;&#xa;&#x2022; Aplica&#xe7;&#xe3;o de protetor de pintura.&#xa;Lavagem externa e interna.&#xa;&#xa;&#x2022; Secagem manual.&#xa;&#xa;&#x2022; Limpeza de vidros internos&#xa;e externos.&#xa;&#xa;&#x2022; Com direito a 4 limpeza por m&#xea;s&#xa;&#xa;Valor R$1.000,00/m&#xea;s&#xa;"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Confirmar"/>
+        <Property name="text" type="java.lang.String" value="Premium"/>
+        <Property name="name" type="java.lang.String" value="premium" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Standard"/>
+        <Property name="name" type="java.lang.String" value="Standard" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="B&#xe1;sico"/>
+        <Property name="name" type="java.lang.String" value="B&#xe1;sico" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

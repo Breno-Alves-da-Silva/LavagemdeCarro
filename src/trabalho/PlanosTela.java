@@ -4,12 +4,17 @@
  */
 package trabalho;
 
+import javax.swing.JCheckBox;
+
 /**
  *
  * @author Breno
  */
 public class PlanosTela extends javax.swing.JFrame {
-
+        Inicial tela_principal;
+        String planoEscolhido;
+        Pessoa pessoa;
+        PlanosTela tPlano;
     /**
      * Creates new form PlanosTela
      */
@@ -27,9 +32,6 @@ public class PlanosTela extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -37,45 +39,58 @@ public class PlanosTela extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setText("Planos");
 
-        jCheckBox1.setText("Plano Premium");
-
-        jCheckBox2.setText("Plano Standard");
-
-        jCheckBox3.setText("Plano Básico");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
-            }
-        });
-
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("             Plano Básico\n\n• Lavagem externa para\n remoção de sujeira e detritos.\n\n• Secagem manual.\n\n• Limpeza de vidros externos\nquanto de proteção.\n\n\n\n• Com direito a 1 limpeza por mês\n\nValor R$300,00/mês");
+        jTextArea1.setText("             Plano Básico\n\n• Lavagem externa para\n remoção de sujeira e detritos.\n\n• Secagem manual.\n\n• Limpeza de vidros externos\nquanto de proteção.\n\n\n\n• Com direito a 1 limpeza por mês\n\nValor R$275,00/mês");
         jScrollPane4.setViewportView(jTextArea1);
 
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTextArea2.setRows(5);
-        jTextArea2.setText("           Plano Standard\n\n• Lavagem externa e interna.\n\n• Secagem manual.\n\n• Limpeza de vidros internos e\n externos.\n\n\n\n\n• Com direito a 2 limpeza por mês\n\nValor R$575,00/mês");
+        jTextArea2.setText("           Plano Standard\n\n• Lavagem externa e interna.\n\n• Secagem manual.\n\n• Limpeza de vidros internos e\n externos.\n\n\n\n\n• Com direito a 2 limpeza por mês\n\nValor R$500,00/mês");
         jScrollPane5.setViewportView(jTextArea2);
 
         jTextArea3.setEditable(false);
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTextArea3.setRows(5);
-        jTextArea3.setText("            Plano Premium \n\n• Lavagem externa e\ninterna detalhada.\n\n• Secagem manual.\n\n• Limpeza de vidros internos\ne externos.\n\n• Aplicação de protetor de pintura.\nLavagem externa e interna.\n\n• Secagem manual.\n\n• Limpeza de vidros internos\ne externos.\n\n• Com direito a 4 limpeza por mês\n\nValor R$1.100,00/mês\n");
+        jTextArea3.setText("            Plano Premium \n\n• Lavagem externa e\ninterna detalhada.\n\n• Secagem manual.\n\n• Limpeza de vidros internos\ne externos.\n\n• Aplicação de protetor de pintura.\nLavagem externa e interna.\n\n• Secagem manual.\n\n• Limpeza de vidros internos\ne externos.\n\n• Com direito a 4 limpeza por mês\n\nValor R$1.000,00/mês\n");
         jScrollPane6.setViewportView(jTextArea3);
 
-        jButton1.setText("Confirmar");
+        jButton1.setText("Premium");
+        jButton1.setName("premium"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Standard");
+        jButton2.setName("Standard"); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Básico");
+        jButton3.setName("Básico"); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,22 +105,17 @@ public class PlanosTela extends javax.swing.JFrame {
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jCheckBox3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jCheckBox2)
-                .addGap(122, 122, 122)
-                .addComponent(jCheckBox1)
-                .addGap(69, 69, 69))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(275, 275, 275)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(290, 290, 290)
-                        .addComponent(jLabel1)))
+                .addGap(290, 290, 290)
+                .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(jButton3)
+                .addGap(142, 142, 142)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(76, 76, 76))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,20 +131,29 @@ public class PlanosTela extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox1))
-                .addGap(35, 35, 35)
-                .addComponent(jButton1)
-                .addGap(29, 29, 29))
+                    .addComponent(jButton1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton2)
+                        .addComponent(jButton3)))
+                .addGap(88, 88, 88))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+        planoEscolhido = "premium";
+        pessoa.addPlano(planoEscolhido);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,9 +192,8 @@ public class PlanosTela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;

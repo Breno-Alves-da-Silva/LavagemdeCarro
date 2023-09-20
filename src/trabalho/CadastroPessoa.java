@@ -15,6 +15,8 @@ import javax.swing.text.MaskFormatter;
  */
 public class CadastroPessoa extends javax.swing.JFrame {
        MaskFormatter mfdata;
+       CadastroCarro cad_car;
+       Inicial tela_principal;
     /**
      * Creates new form FrameTrabalho
      */
@@ -277,6 +279,10 @@ public class CadastroPessoa extends javax.swing.JFrame {
         String endereço = caixa_endereço.getText();
         
        Pessoa pessoa = new Pessoa(nome,sobrenome,sexo,telefone,nascimento,endereço);
+        this.dispose();
+        this.tela_principal.gravaPessoa(pessoa);
+        cad_car = new CadastroCarro();
+        cad_car.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
