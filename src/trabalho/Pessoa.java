@@ -15,24 +15,22 @@ public class Pessoa {
     private String telefone;
     private String dataNascimento;
     private String endereco;
-    private String plano;
+    public String plano ;
     
 
-    public Pessoa (String nome,String sobrenome, String sexo, String telefone, String dataNascimento, String endereco) {
+    public Pessoa (String nome,String sobrenome, String sexo, String telefone, String dataNascimento, String endereco, String plano) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.sexo = sexo;
         this.telefone = telefone;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
+        this.plano = plano;
         
      }
     
-     public void addPlano(String planoU){
-         this.plano = planoU;
-             
-  }
-      public String todosOsDados(){
-        return "Nome e Sobrenome: " + this.nome + " " + this.sobrenome ;
-    }
+     public void setPlano(String novoPlano) {
+    this.plano = novoPlano;
+}
+
 }

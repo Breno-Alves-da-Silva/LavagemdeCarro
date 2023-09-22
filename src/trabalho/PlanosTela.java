@@ -5,6 +5,8 @@
 package trabalho;
 
 import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+import pessoa.Pessoa;
 
 /**
  *
@@ -21,6 +23,7 @@ public class PlanosTela extends javax.swing.JFrame {
     public PlanosTela() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -143,16 +146,27 @@ public class PlanosTela extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        planoEscolhido = "premium";
-        pessoa.addPlano(planoEscolhido);
+        this.dispose();
+        planoEscolhido = "Premium";
+        JOptionPane.showMessageDialog(null, "Cadastro com sucesso.");
+        pessoa.setPlano(planoEscolhido);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+         this.dispose();
+        planoEscolhido = "Standard";
+        JOptionPane.showMessageDialog(null, "Cadastro com sucesso.");
+        //pessoa.addPlano(planoEscolhido);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+         this.dispose();
+        planoEscolhido = "Básico";
+        JOptionPane.showMessageDialog(null, "Cadastro com sucesso.");
+        //pessoa.addPlano(planoEscolhido);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

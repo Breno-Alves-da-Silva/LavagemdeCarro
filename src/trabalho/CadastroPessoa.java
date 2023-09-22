@@ -277,8 +277,9 @@ public class CadastroPessoa extends javax.swing.JFrame {
         String telefone = caixa_telefone.getText();
         String nascimento = caixa_nascimento.getText();
         String endereço = caixa_endereço.getText();
+        String plano = " ";
         
-       Pessoa pessoa = new Pessoa(nome,sobrenome,sexo,telefone,nascimento,endereço);
+       Pessoa pessoa = new Pessoa(nome,sobrenome,sexo,telefone,nascimento,endereço,plano);
         this.dispose();
         this.tela_principal.gravaPessoa(pessoa);
         cad_car = new CadastroCarro();
