@@ -8,13 +8,14 @@ package trabalho;
  *
  * @author Breno
  */
-public class CadastroCarro extends javax.swing.JFrame {
+public class CadastroCarroStandard extends javax.swing.JFrame {
         Inicial tela_principal;
-        PlanosAmostra amostra;
+        Carro carros;
     /**
-     * Creates new form CadastroCarro
+    /**
+     * Creates new form CadastroCarroStandard
      */
-    public CadastroCarro() {
+    public CadastroCarroStandard() {
         initComponents();
     }
 
@@ -27,6 +28,11 @@ public class CadastroCarro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        caixa_cor = new javax.swing.JTextField();
+        caixa_dataDois =  new javax.swing.JFormattedTextField();
+        jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         caixa_placa = new javax.swing.JTextField();
         caixa_marca = new javax.swing.JTextField();
@@ -36,14 +42,34 @@ public class CadastroCarro extends javax.swing.JFrame {
         caixa_modelo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        caixa_cor = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        Básico = new javax.swing.JComboBox<>();
+        caixa_dataUm =  new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel7.setText("Cadastro  Carro");
+
+        jLabel4.setText("Agenda:");
+
+        caixa_cor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caixa_corActionPerformed(evt);
+            }
+        });
+
+        try {
+            caixa_dataDois.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("        ##    /    ##    /   ####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        caixa_dataDois.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caixa_dataDoisActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel6.setText("Placa:");
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setText("Cor:");
@@ -94,29 +120,16 @@ public class CadastroCarro extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2.setText("Modelo:");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel7.setText("Cadastro  Carro");
-
-        caixa_cor.addActionListener(new java.awt.event.ActionListener() {
+        try {
+            caixa_dataUm.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("        ##    /    ##    /   ####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        caixa_dataUm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                caixa_corActionPerformed(evt);
+                caixa_dataUmActionPerformed(evt);
             }
         });
-
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel6.setText("Placa:");
-
-        jButton2.setText("Planos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel8.setText("Plano");
-
-        Básico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Básico", "Standard", "Premium" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,38 +139,32 @@ public class CadastroCarro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(132, 132, 132)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addGap(76, 76, 76)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(caixa_cor, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(caixa_placa, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(caixa_marca, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(caixa_ano, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(caixa_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(96, 96, 96)
-                                .addComponent(caixa_cor, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(79, 79, 79)
-                                .addComponent(caixa_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(83, 83, 83)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(caixa_marca, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel8))
-                                .addGap(87, 87, 87)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Básico, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(113, 113, 113)
-                                        .addComponent(jButton2))
-                                    .addComponent(caixa_ano, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(caixa_placa, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(caixa_dataUm)
+                                .addGap(25, 25, 25)
+                                .addComponent(caixa_dataDois))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(285, 285, 285)
-                        .addComponent(jButton1)))
-                .addContainerGap(134, Short.MAX_VALUE))
+                        .addGap(255, 255, 255)
+                        .addComponent(jLabel7)))
+                .addContainerGap(161, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(258, 258, 258))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,24 +185,32 @@ public class CadastroCarro extends javax.swing.JFrame {
                     .addComponent(caixa_cor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(caixa_placa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel6)
+                    .addComponent(caixa_placa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(caixa_ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(caixa_ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Básico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
-                    .addComponent(jButton2))
-                .addGap(15, 15, 15)
+                    .addComponent(jLabel4)
+                    .addComponent(caixa_dataDois, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(caixa_dataUm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void caixa_corActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixa_corActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_caixa_corActionPerformed
+
+    private void caixa_dataDoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixa_dataDoisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_caixa_dataDoisActionPerformed
 
     private void caixa_placaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixa_placaActionPerformed
         // TODO add your handling code here:
@@ -213,31 +228,27 @@ public class CadastroCarro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_caixa_modeloActionPerformed
 
-    private void caixa_corActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixa_corActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_caixa_corActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String marca = caixa_marca.getText();
         String modelo = caixa_modelo.getText();
         String cor = caixa_cor.getText();
         String placa = caixa_placa.getText();
-        int ano = Integer.parseInt(caixa_ano.getText())  ;
-       
+        int ano = Integer.parseInt(caixa_ano.getText());
+         String agendaUm =caixa_dataUm.getText();
+        String agendaDois =caixa_dataDois.getText();
+
         Carro carro = new Carro(marca,modelo,ano,cor,placa);
+         this.tela_principal.gravaCarro(carro);
+        this.carros.setAgendaUm(agendaUm);
+        this.carros.setAgendaDois(agendaDois);
         this.dispose();
-        
-        amostra.setVisible(true);
-      
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void caixa_dataUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixa_dataUmActionPerformed
         // TODO add your handling code here:
-        amostra = new PlanosAmostra(); 
-        amostra.setVisible(true);
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_caixa_dataUmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,39 +267,39 @@ public class CadastroCarro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CadastroCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroCarroStandard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CadastroCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroCarroStandard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CadastroCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroCarroStandard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CadastroCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroCarroStandard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CadastroCarro().setVisible(true);
+                new CadastroCarroStandard().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Básico;
     private javax.swing.JFormattedTextField caixa_ano;
     private javax.swing.JTextField caixa_cor;
+    private javax.swing.JFormattedTextField caixa_dataDois;
+    private javax.swing.JFormattedTextField caixa_dataUm;
     private javax.swing.JTextField caixa_marca;
     private javax.swing.JTextField caixa_modelo;
     private javax.swing.JTextField caixa_placa;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

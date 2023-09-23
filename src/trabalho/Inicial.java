@@ -17,7 +17,7 @@ public class Inicial extends javax.swing.JFrame {
         Pessoa pessoa;
         Carro carro;
         Inicial tela_principal;
-        CadastroCarro cad_carro;
+        CadastroCarroPremium cad_carro;
         DefaultListModel model = new DefaultListModel();
     /**
      * Creates new form Inicial
