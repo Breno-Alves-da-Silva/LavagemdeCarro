@@ -4,6 +4,8 @@
  */
 package trabalho;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Breno
@@ -215,11 +217,12 @@ public class CadastroCarroBasico extends javax.swing.JFrame {
         String cor = caixa_cor.getText();
         String placa = caixa_placa.getText();
         int ano = Integer.parseInt(caixa_ano.getText());
-        String agendaUm =caixa_dataUm.getText();
+        String agendaUm = caixa_dataUm.getText();
         
-        Carro carro = new Carro(marca,modelo,ano,cor,placa);
-         this.tela_principal.gravaCarro(carro);
-        this.carros.setAgendaUm(agendaUm);
+        Carro carro = new Carro(marca,modelo,ano,cor,placa); 
+        carro.setAgendaUm(agendaUm);
+        this.tela_principal.gravaCarro(carro);
+        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
         this.dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed

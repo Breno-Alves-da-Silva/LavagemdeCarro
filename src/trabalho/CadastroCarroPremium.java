@@ -4,6 +4,8 @@
  */
 package trabalho;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Breno
@@ -268,12 +270,13 @@ public class CadastroCarroPremium extends javax.swing.JFrame {
         String agendaQuatro =caixa_dataQuatro.getText();
        
         Carro carro = new Carro(marca,modelo,ano,cor,placa);
-        this.tela_principal.gravaCarro(carro);
-        this.carros.setAgendaUm(agendaUm);
-        this.carros.setAgendaDois(agendaDois);
-        this.carros.setAgendaTres(agendaTres);
-        this.carros.setAgendaQuatro(agendaQuatro);
         
+        carro.setAgendaUm(agendaUm);
+        carro.setAgendaDois(agendaDois);
+        carro.setAgendaTres(agendaTres);
+        carro.setAgendaQuatro(agendaQuatro);
+        this.tela_principal.gravaCarro(carro);
+        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
         this.dispose();
         
 
