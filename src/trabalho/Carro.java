@@ -46,6 +46,19 @@ public class Carro {
     public String getPlaca() {
         return placa;
     }
+    public String getAgendaUm() {
+        return agenda[0];
+    }
+    public String getAgendaDois() {
+        return agenda[1];
+    }
+     public String getAgendaTres() {
+        return agenda[1];
+    }
+      public String getAgendaQuatro() {
+        return agenda[1];
+    }
+    
     public void setAgendaUm(String agenda){
        this.agenda[0] = agenda;
     }

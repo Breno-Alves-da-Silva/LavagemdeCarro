@@ -276,7 +276,10 @@ public class CadastroCarroPremium extends javax.swing.JFrame {
         carro.setAgendaTres(agendaTres);
         carro.setAgendaQuatro(agendaQuatro);
         this.tela_principal.gravaCarro(carro);
-        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
+         JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso dados salvos:"+"\n"+"Marca: "+ carro.getMarca()+"\n"+"Modelo: "+carro.getModelo()+"\n"+"Cor:  "+carro.getCor()+"\n"+"Placa:  "
+                 +carro.getPlaca()+"\n"+"Ano: "+carro.getAno()+"\n"+"Data primeira lavagem: "+carro.getAgendaUm()
+                 +"\n"+"Data segunda lavagem: "+carro.getAgendaDois()+"\n"+"Data terceira lavagem: "+carro.getAgendaTres()
+                 +"\n"+"Data quarta lavagem: "+carro.getAgendaQuatro());
         this.dispose();
         
 

@@ -7,6 +7,7 @@ package trabalho;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.text.MaskFormatter;
 
 /**
@@ -309,6 +310,8 @@ public class CadastroPessoa extends javax.swing.JFrame {
         String plano = (String) combobox.getSelectedItem();
         
        Pessoa pessoa = new Pessoa(nome,sobrenome,sexo,telefone,nascimento,endereço,plano);
+         JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso dados salvos:"+"\n"+"Nome: "+ pessoa.getNome()+"\n"+"Sobreno: "+pessoa.getSobrenome()+"\n"+"Sexo:  "+pessoa.getSexo()+
+                 "\n"+"Telefone:  "+pessoa.getTelefone()+"\n"+"Nascimento: "+pessoa.getDataNascimento()+"\n"+"Endereço: "+pessoa.getEndereco()+"\n"+"Plano: "+pessoa.getPlano());
        
         this.tela_principal.gravaPessoa(pessoa);
         if(plano == "Premium"){

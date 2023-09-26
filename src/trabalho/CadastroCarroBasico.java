@@ -222,7 +222,8 @@ public class CadastroCarroBasico extends javax.swing.JFrame {
         Carro carro = new Carro(marca,modelo,ano,cor,placa); 
         carro.setAgendaUm(agendaUm);
         this.tela_principal.gravaCarro(carro);
-        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
+             JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso dados salvos:"+"\n"+"Marca: "+ carro.getMarca()+"\n"+"Modelo: "+carro.getModelo()+"\n"+"Cor:  "+carro.getCor()+"\n"+"Placa:  "
+                 +carro.getPlaca()+"\n"+"Ano: "+carro.getAno()+"\n"+"Data lavagem: "+carro.getAgendaUm());
         this.dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed

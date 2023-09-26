@@ -28,6 +28,33 @@ public class Pessoa {
         this.plano = plano;
         
      }
+     public String getNome() {
+        return nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public String getPlano() {
+        return plano;
+    }
     
      public void setPlano(String novoPlano) {
     this.plano = novoPlano;
